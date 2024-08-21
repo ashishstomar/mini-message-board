@@ -7,3 +7,7 @@ app.listen(3000);
 app.get("/", (req, res) => {
   res.send("<p>HOME PAGE</p>");
 });
+
+app.get("/new", (req, res) => {
+  res.send("<p>New Message<p>");
+});
