@@ -1,13 +1,15 @@
 const express = require("express");
-
+const path = require("path");
 const app = express();
 
-app.listen(3000);
+app.set("view engine", "ejs");
+app.set("views", path.resolve("./views"));
 
 app.get("/", (req, res) => {
-  res.send("<p>HOME PAGE</p>");
+  return res.render("home");
 });
 
-app.get("/new", (req, res) => {
-  res.send("<p>New Message<p>");
-});
+app.get("/new", (req, res) => {});
+
+const PORT = 3000;
+app.listen(PORT, () => `Server started at PORT ${PORT}`);
