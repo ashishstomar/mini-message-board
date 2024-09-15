@@ -42,8 +42,9 @@ A simple mini-message board built with Express and EJS. Users can write and view
 ## File Structure
 
 - **`app.js`**: Main server file that sets up Express and routes.
-- **`views/`**: Directory containing EJS templates.
 - **`routes/`**: Directory for route handlers.
+- **`controllers/`**: Directory for Logic to handle requests and responses.
+- **`views/`**: Directory containing EJS templates.
 
 ## Contributing
 
