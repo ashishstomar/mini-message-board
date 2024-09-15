@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const router = require("./routes/routes");
@@ -12,5 +13,5 @@ app.get("/", router);
 
 app.post("/new", router);
 
-const PORT = 3000;
-app.listen(PORT, () => `Server started at PORT ${PORT}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server started at PORT ${PORT}`));
